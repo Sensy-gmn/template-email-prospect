@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Email Template</title>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fdfdfd;
+      }
+      .header {
+        background-color: #ffffff;
+        color: black;
+        text-align: center;
+        box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.1);
+      }
+      main {
+        margin: 0 auto;
+      }
+      .title-position {
+        background-color: #f6f7f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .title {
+        font-size: 40px;
+      }
+      .content {
+        margin: 20px 0;
+      }
+      .footer {
+        background-color: #f8f8f8;
+        border-top: 1px solid #e7e7e7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      .footer .company-info {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+      }
+      .footer .contact-info {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+      }
+      .footer .company-info h4 {
+        margin: 0;
+        color: #0073e6;
+      }
+      .footer .company-info p {
+        margin: 5px 0;
+        color: #666;
+      }
+      .footer .contact-info .icon-text {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+      }
+      .footer .contact-info .icon-text svg {
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
+        fill: #666;
+      }
+      .footer-contact-text {
+        font-size: 14px;
+        color: #666;
+      }
+      .logo {
+        margin: 0 auto;
+      }
+      .article {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .article:hover {
+        background-color: #ffffff;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+      }
+      .article svg {
+        margin-right: 10px;
+        align-self: flex-start;
+        width: 50px;
+        height: 50px;
+      }
+      .article div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+      }
+      h3 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      .article-list-item {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+      }
+      .list-item {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+      .list-item svg {
+        margin-right: 10px;
+        margin-top: 5px;
+        width: 24px;
+        height: 24px;
+      }
+      .item-title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .item-text {
+        font-size: 14px;
+        margin: 0;
+      }
+      .offres-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .offres-double-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      .offres-double-item {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .offres-double-item:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .offres-double-item-img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px 5px 0 0;
+      }
+      .offres-double-item-content {
+        padding: 20px;
+      }
+      .offres-double-item-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-align: center;
+        color: #494949f1;
+      }
+      .offres-double-item-text {
+        font-size: 16px;
+        font-weight: normal;
+        text-align: start;
+        color: #494949d0;
+      }
+      .signature {
+        font-size: 14px;
+        color: #666;
+        font-style: italic;
+      }
+      .qr-code-img {
+        width: 70px;
+        height: 70px;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <!-- header -->
+    <header class="header">
+      <img
+        src="https://www.anstett-solutions-pro.fr/img/logo-dark.png"
+        alt="logo Anstett Solutions Pro"
+        class="logo"
+      />
+    </header>
+
+    <!--  -->
+    <main class="content">
+      <section>
+        <p>Bonjour,</p>
+        <br />
+        <p>J'espère que vous allez bien.</p>
+        <p>
+          Suite à notre récente conversation, je suis ravi de vous présenter
+          notre offre de création de site web personnalisée, optimisée pour le
+          référencement.
+        </p>
+        <br />
+        <p>
+          Chez Anstett Solutions Pro, nous avons à cœur de vous aider à
+          améliorer votre visibilité en ligne et à vous démarquer de la
+          concurrence.
+        </p>
+      </section>
+      <h2 class="title title-position">Pourquoi ?</h2>
+      <section>
+        <!--- -->
+        <article class="article">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 255.98"
+            class="svg-inject icon-svg solid-mono icon-svg-xs solid-mono text-violet me-4"
+            width="50"
+            height="50"
+          >
+            <circle class="fill-primary" cx="58.67" cy="149.31" r="32"></circle>
+            <path
+              class="fill-primary"
+              d="M88 202.65H29.33A29.36 29.36 0 000 232v16a8 8 0 008 8h101.33a8 8 0 008-8v-16A29.36 29.36 0 0088 202.65z"
+            ></path>
+            <circle
+              class="fill-primary"
+              cx="197.33"
+              cy="149.31"
+              r="32"
+            ></circle>
+            <path
+              class="fill-primary"
+              d="M226.67 202.65H168A29.36 29.36 0 00138.67 232v16a8 8 0 008 8H248a8 8 0 008-8v-16a29.36 29.36 0 00-29.33-29.35z"
+            ></path>
+            <path
+              class="fill-secondary"
+              d="M149.76 108.48v7.68A11.9 11.9 0 01137.81 128h-19.63c-5.76 0-12-4.27-12-13.76v-5.76zM176 47.68a47.26 47.26 0 01-17.6 36.91 22.89 22.89 0 00-8.32 13.23H106a20 20 0 00-7.79-12.69A47.13 47.13 0 0180 46.73C80.53 21.34 101.76.33 127.25 0a47.34 47.34 0 0134.56 13.88A46.82 46.82 0 01176 47.68z"
+            ></path>
+          </svg>
+          <div>
+            <h3>Visibilité 24/7 :</h3>
+            <p>
+              Un site web vous rend accessible à tout moment, touchant ainsi un
+              public plus large. Grâce à des techniques qui améliorent votre
+              position sur Google, votre site apparaît rapidement en haut des
+              résultats de recherche, attirant de nouveaux clients.
+            </p>
+          </div>
+        </article>
+
+        <!--- -->
+        <article class="article">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 255.98"
+            class="svg-inject icon-svg solid-mono icon-svg-xs solid-mono text-violet me-4"
+            width="50"
+            height="50"
+          >
+            <circle class="fill-primary" cx="58.67" cy="149.31" r="32"></circle>
+            <path
+              class="fill-primary"
+              d="M88 202.65H29.33A29.36 29.36 0 000 232v16a8 8 0 008 8h101.33a8 8 0 008-8v-16A29.36 29.36 0 0088 202.65z"
+            ></path>
+            <circle
+              class="fill-primary"
+              cx="197.33"
+              cy="149.31"
+              r="32"
+            ></circle>
+            <path
+              class="fill-primary"
+              d="M226.67 202.65H168A29.36 29.36 0 00138.67 232v16a8 8 0 008 8H248a8 8 0 008-8v-16a29.36 29.36 0 00-29.33-29.35z"
+            ></path>
+            <path
+              class="fill-secondary"
+              d="M149.76 108.48v7.68A11.9 11.9 0 01137.81 128h-19.63c-5.76 0-12-4.27-12-13.76v-5.76zM176 47.68a47.26 47.26 0 01-17.6 36.91 22.89 22.89 0 00-8.32 13.23H106a20 20 0 00-7.79-12.69A47.13 47.13 0 0180 46.73C80.53 21.34 101.76.33 127.25 0a47.34 47.34 0 0134.56 13.88A46.82 46.82 0 01176 47.68z"
+            ></path>
+          </svg>
+          <div>
+            <h3>Crédibilité renforcée :</h3>
+            <p>
+              Un site bien conçu améliore la confiance des clients, car 56 % des
+              internautes n'ont pas confiance dans les entreprises sans site
+              web.
+            </p>
+          </div>
+        </article>
+
+        <!--- -->
+        <article class="article">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 255.98"
+            class="svg-inject icon-svg solid-mono icon-svg-xs solid-mono text-violet me-4"
+            width="50"
+            height="50"
+          >
+            <circle class="fill-primary" cx="58.67" cy="149.31" r="32"></circle>
+            <path
+              class="fill-primary"
+              d="M88 202.65H29.33A29.36 29.36 0 000 232v16a8 8 0 008 8h101.33a8 8 0 008-8v-16A29.36 29.36 0 0088 202.65z"
+            ></path>
+            <circle
+              class="fill-primary"
+              cx="197.33"
+              cy="149.31"
+              r="32"
+            ></circle>
+            <path
+              class="fill-primary"
+              d="M226.67 202.65H168A29.36 29.36 0 00138.67 232v16a8 8 0 008 8H248a8 8 0 008-8v-16a29.36 29.36 0 00-29.33-29.35z"
+            ></path>
+            <path
+              class="fill-secondary"
+              d="M149.76 108.48v7.68A11.9 11.9 0 01137.81 128h-19.63c-5.76 0-12-4.27-12-13.76v-5.76zM176 47.68a47.26 47.26 0 01-17.6 36.91 22.89 22.89 0 00-8.32 13.23H106a20 20 0 00-7.79-12.69A47.13 47.13 0 0180 46.73C80.53 21.34 101.76.33 127.25 0a47.34 47.34 0 0134.56 13.88A46.82 46.82 0 01176 47.68z"
+            ></path>
+          </svg>
+          <div>
+            <h3>Contrôle de l'image de marque :</h3>
+            <p>
+              Vous avez la liberté de personnaliser votre contenu et votre
+              présentation, ce qui vous permet de façonner l'image que vous
+              souhaitez projeter.
+            </p>
+          </div>
+        </article>
+
+        <!--- -->
+        <article class="article">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 255.98"
+            class="svg-inject icon-svg solid-mono icon-svg-xs solid-mono text-violet me-4"
+            width="50"
+            height="50"
+          >
+            <circle class="fill-primary" cx="58.67" cy="149.31" r="32"></circle>
+            <path
+              class="fill-primary"
+              d="M88 202.65H29.33A29.36 29.36 0 000 232v16a8 8 0 008 8h101.33a8 8 0 008-8v-16A29.36 29.36 0 0088 202.65z"
+            ></path>
+            <circle
+              class="fill-primary"
+              cx="197.33"
+              cy="149.31"
+              r="32"
+            ></circle>
+            <path
+              class="fill-primary"
+              d="M226.67 202.65H168A29.36 29.36 0 00138.67 232v16a8 8 0 008 8H248a8 8 0 008-8v-16a29.36 29.36 0 00-29.33-29.35z"
+            ></path>
+            <path
+              class="fill-secondary"
+              d="M149.76 108.48v7.68A11.9 11.9 0 01137.81 128h-19.63c-5.76 0-12-4.27-12-13.76v-5.76zM176 47.68a47.26 47.26 0 01-17.6 36.91 22.89 22.89 0 00-8.32 13.23H106a20 20 0 00-7.79-12.69A47.13 47.13 0 0180 46.73C80.53 21.34 101.76.33 127.25 0a47.34 47.34 0 0134.56 13.88A46.82 46.82 0 01176 47.68z"
+            ></path>
+          </svg>
+          <div>
+            <h3>Information centralisée :</h3>
+            <p>
+              Votre site est une plateforme où les clients peuvent trouver
+              facilement informations sur vos produits ou services, ce qui
+              améliore le service client.
+            </p>
+          </div>
+        </article>
+
+        <!--- -->
+        <article class="article">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 255.98"
+            class="svg-inject icon-svg solid-mono icon-svg-xs solid-mono text-violet me-4"
+            width="50"
+            height="50"
+          >
+            <circle class="fill-primary" cx="58.67" cy="149.31" r="32"></circle>
+            <path
+              class="fill-primary"
+              d="M88 202.65H29.33A29.36 29.36 0 000 232v16a8 8 0 008 8h101.33a8 8 0 008-8v-16A29.36 29.36 0 0088 202.65z"
+            ></path>
+            <circle
+              class="fill-primary"
+              cx="197.33"
+              cy="149.31"
+              r="32"
+            ></circle>
+            <path
+              class="fill-primary"
+              d="M226.67 202.65H168A29.36 29.36 0 00138.67 232v16a8 8 0 008 8H248a8 8 0 008-8v-16a29.36 29.36 0 00-29.33-29.35z"
+            ></path>
+            <path
+              class="fill-secondary"
+              d="M149.76 108.48v7.68A11.9 11.9 0 01137.81 128h-19.63c-5.76 0-12-4.27-12-13.76v-5.76zM176 47.68a47.26 47.26 0 01-17.6 36.91 22.89 22.89 0 00-8.32 13.23H106a20 20 0 00-7.79-12.69A47.13 47.13 0 0180 46.73C80.53 21.34 101.76.33 127.25 0a47.34 47.34 0 0134.56 13.88A46.82 46.82 0 01176 47.68z"
+            ></path>
+          </svg>
+          <div>
+            <h3>Avantage concurrentiel :</h3>
+            <p>
+              Posséder un site professionnel vous distingue de la concurrence.
+              Dans un marché où 80 % des entreprises ont un site, ne pas en
+              avoir peut vous désavantager.
+            </p>
+          </div>
+        </article>
+
+        <!--- -->
+        <article class="article">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 255.98"
+            class="svg-inject icon-svg solid-mono icon-svg-xs solid-mono text-violet me-4"
+            width="50"
+            height="50"
+          >
+            <circle class="fill-primary" cx="58.67" cy="149.31" r="32"></circle>
+            <path
+              class="fill-primary"
+              d="M88 202.65H29.33A29.36 29.36 0 000 232v16a8 8 0 008 8h101.33a8 8 0 008-8v-16A29.36 29.36 0 0088 202.65z"
+            ></path>
+            <circle
+              class="fill-primary"
+              cx="197.33"
+              cy="149.31"
+              r="32"
+            ></circle>
+            <path
+              class="fill-primary"
+              d="M226.67 202.65H168A29.36 29.36 0 00138.67 232v16a8 8 0 008 8H248a8 8 0 008-8v-16a29.36 29.36 0 00-29.33-29.35z"
+            ></path>
+            <path
+              class="fill-secondary"
+              d="M149.76 108.48v7.68A11.9 11.9 0 01137.81 128h-19.63c-5.76 0-12-4.27-12-13.76v-5.76zM176 47.68a47.26 47.26 0 01-17.6 36.91 22.89 22.89 0 00-8.32 13.23H106a20 20 0 00-7.79-12.69A47.13 47.13 0 0180 46.73C80.53 21.34 101.76.33 127.25 0a47.34 47.34 0 0134.56 13.88A46.82 46.82 0 01176 47.68z"
+            ></path>
+          </svg>
+          <div>
+            <h3>Génération de nouveaux clients :</h3>
+            <p>
+              Un site peut attirer des clients potentiels grâce à du contenu
+              pertinent.
+            </p>
+          </div>
+        </article>
+      </section>
+      <!--- -->
+      <h2 class="title title-position">Notre approche</h2>
+
+      <section>
+        <p>
+          Nous nous occupons de l'aspect technique pour que vous puissiez vous
+          concentrer sur ce qui compte le plus : votre activité.
+        </p>
+        <br />
+        <p>
+          Notre service d'accompagnement personnalisé se déroule en trois étapes
+          :
+        </p>
+      </section>
+
+      <section>
+        <ul>
+          <li class="list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#00A5FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-check-circle"
+            >
+              <path d="M9 11l3 3L22 4"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <article class="article-list-item">
+              <h4 class="item-title">Création sur-mesure :</h4>
+              <p class="item-text">
+                Visitez notre site Anstett Solutions Pro pour découvrir nos
+                projets, démos et modules. Chaque élément est personnalisable,
+                de l'en-tête à la barre de navigation, en passant par la
+                présentation de votre équipe et de vos produits. Vous pouvez
+                également mettre en avant vos avis Google et bien d'autres
+                fonctionnalités.
+              </p>
+            </article>
+          </li>
+
+          <li class="list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#00A5FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-check-circle"
+            >
+              <path d="M9 11l3 3L22 4"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <article class="article-list-item">
+              <h4 class="item-title">Personnalisation :</h4>
+              <p class="item-text">
+                Si plusieurs éléments vous plaisent mais ne se trouvent pas sur
+                le même modèle, envoyez-nous simplement une capture d'écran des
+                parties qui vous séduisent. Nous assemblerons le tout pour vous.
+              </p>
+              <p class="item-text">
+                En manque d'inspiration pour vos textes ou images ?
+              </p>
+              <p class="item-text">
+                Nous mettons notre créativité à votre service pour concevoir des
+                contenus qui reflètent votre singularité et répondent aux
+                attentes de votre marché cible.
+              </p>
+            </article>
+          </li>
+
+          <li class="list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#00A5FF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-check-circle"
+            >
+              <path d="M9 11l3 3L22 4"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <article class="article-list-item">
+              <h4 class="item-title">Présentation et ajustements :</h4>
+              <p class="item-text">
+                Nous organiserons un rendez-vous en visioconférence ou par
+                téléphone pour vous présenter une première esquisse de votre
+                projet et finaliser les détails afin de vous livrer un produit
+                qui correspond parfaitement à vos attentes.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <h2 class="title title-position">Nos Offres</h2>
+      <section class="offres-container">
+        <section class="offres-double-container">
+          <article class="offres-double-item">
+            <img
+              src="https://www.anstett-solutions-pro.fr/img/photos/se5.jpg"
+              alt="Site Vitrine"
+              class="offres-double-item-img"
+            />
+            <div class="offres-double-item-content">
+              <h3 class="offres-double-item-title">Site Vitrine</h3>
+              <p class="offres-double-item-text">
+                Inclut un site personnalisé, un formulaire de contact, la
+                création de vos textes et images, ainsi qu'un an de mise en
+                production et de nom de domaine.
+              </p>
+            </div>
+          </article>
+          <article class="offres-double-item">
+            <img
+              src="https://www.anstett-solutions-pro.fr/img/photos/se6.jpg"
+              alt="Projets sur mesure"
+              class="offres-double-item-img"
+            />
+            <div class="offres-double-item-content">
+              <h3 class="offres-double-item-title">Projets sur mesure</h3>
+              <p class="offres-double-item-text">
+                Besoin de plus ? Nous sommes à votre disposition pour vous
+                accompagner dans tous vos projets web, qu'il s'agisse d'un site
+                e-commerce ou d'une interface de gestion de prospects. La seule
+                limite est votre imagination.
+              </p>
+            </div>
+          </article>
+        </section>
+        <p>
+          Nous serions ravis de vous accompagner dans la réalisation de votre
+          projet, en toute sérénité.
+        </p>
+        <p>Merci de votre attention et à très bientôt,</p>
+        <p class="signature">
+          Victor Anstett,
+          <br />Fondateur d'Anstett Solutions Pro.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="company-info">
+        <h4>Anstett Solutions Pro</h4>
+        <p>© 2024 Anstett Solutions Pro. Tous droits réservés.</p>
+      </div>
+      <div class="contact-info">
+        <div class="icon-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-mail"
+          >
+            <path d="M4 4h16v16H4z"></path>
+            <path d="M22 6l-10 7L2 6"></path>
+          </svg>
+          <p class="footer-contact-text">contact@anstett-solutions-pro.fr</p>
+        </div>
+        <div class="icon-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-link"
+          >
+            <path
+              d="M10 14a5 5 0 0 1 7 0l3 3a5 5 0 0 1-7 7l-3-3a5 5 0 0 1 0-7"
+            ></path>
+            <path
+              d="M14 10a5 5 0 0 1 0-7l3-3a5 5 0 0 1 7 7l-3 3a5 5 0 0 1-7 0"
+            ></path>
+          </svg>
+          <p class="footer-contact-text">www.anstett-solutions-pro.fr</p>
+        </div>
+        <div class="icon-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-phone"
+          >
+            <path
+              d="M22 16.92V23a1 1 0 0 1-1.11 1 19.91 19.91 0 0 1-8.49-2.69 19.91 19.91 0 0 1-8.49-8.49A19.91 19.91 0 0 1 1 3.11 1 1 0 0 1 2 2h6.08a1 1 0 0 1 1 .68l2.54 6.37a1 1 0 0 1-.27 1.09l-2.83 2.83a16 16 0 0 0 6.37 6.37l2.83-2.83a1 1 0 0 1 1.09-.27l6.37 2.54a1 1 0 0 1 .68 1z"
+            ></path>
+          </svg>
+          <p class="footer-contact-text">+33 6 42 18 55 95</p>
+        </div>
+      </div>
+
+      <div class="qr-code">
+        <?xml version="1.0" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+        <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="150.000000pt"
+          height="148.000000pt"
+          viewBox="0 0 150.000000 148.000000"
+          preserveAspectRatio="xMidYMid meet"
+          class="qr-code-img"
+        >
+          <g
+            transform="translate(0.000000,148.000000) scale(0.100000,-0.100000)"
+            fill="#000000"
+            stroke="none"
+          >
+            <path
+              d="M22 1278 l3 -173 170 0 170 0 3 173 2 172 -175 0 -175 0 2 -172z
+m298 -3 l0 -125 -125 0 -125 0 0 125 0 125 125 0 125 0 0 -125z"
+            />
+            <path d="M120 1275 l0 -75 75 0 75 0 0 75 0 75 -75 0 -75 0 0 -75z" />
+            <path
+              d="M470 1425 c0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -20 5 -25
+25 -25 20 0 25 -5 25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -23 3
+-25 50 -25 l50 0 0 -75 c0 -73 1 -75 25 -75 24 0 25 2 25 75 0 73 1 75 25 75
+20 0 25 -5 25 -25 0 -20 5 -25 25 -25 20 0 25 -5 25 -25 0 -20 -5 -25 -25 -25
+-24 0 -25 -2 -25 -75 l0 -75 45 0 c41 0 45 -2 45 -25 0 -20 5 -25 25 -25 20 0
+25 5 25 25 0 20 5 25 25 25 20 0 25 -5 25 -25 0 -20 5 -25 25 -25 20 0 25 -5
+25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -20 -5 -25 -25 -25 -20 0
+-25 -5 -25 -25 0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 5
+25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20 0 -25 -5 -25 -25
+0 -20 -5 -25 -25 -25 -23 0 -25 3 -25 50 l0 50 75 0 c73 0 75 1 75 25 0 20 5
+25 25 25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20 0 -25 5 -25 25 0 20 5 25 25
+25 l25 0 0 100 0 100 -25 0 c-20 0 -25 5 -25 25 0 20 -5 25 -25 25 -20 0 -25
+        <div>
+          <h3>Avantage concurrentiel :</h3>
+          <p>
+            Posséder un site professionnel vous distingue de la concurrence.
+            Dans un marché où 80 % des entreprises ont un site, ne pas en
+            avoir peut vous désavantager.
+          </p>
+        </div>
+      </article>
+
+      <article class="article">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 255.98"
+          class="svg-inject icon-svg solid-mono icon-svg-xs solid-mono text-violet me-4"
+          width="50"
+          height="50"
+        >
+          <circle class="fill-primary" cx="58.67" cy="149.31" r="32"></circle>
+          <path
+25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20
+-5 25 -25 25 -20 0 -25 -5 -25 -25 0 -20 -5 -25 -25 -25 -23 0 -25 3 -25 50
+l0 50 75 0 c73 0 75 1 75 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 -5 25 -25
+25 -20 0 -25 5 -25 25 0 20 5 25 25 25 l25 0 0 100 0 100 -25 0 c-20 0 -25 5
+-25 25 0 20 -5 25 -25 25 -20 0 -25 -5 -25 -25 0 -20 5 -25 25 -25 20 0 25 -5
+25 -25 0 -23 -3 -25 -50 -25 -47 0 -50 2 -50 25 0 20 -5 25 -25 25 -20 0 -25
+5 -25 25 0 20 -5 25 -25 25 -20 0 -25 -5 -25 -25 l0 -25 -120 0 -120 0 0 -25
+c0 -20 -5 -25 -25 -25 -23 0 -25 3 -25 50 0 47 -2 50 -25 50 -20 0 -25 -5 -25
+-25z m390 -50 c0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -20 5 -25 25 -25
+20 0 25 -5 25 -25 0 -20 5 -25 25 -25 20 0 25 5 25 25 0 23 3 25 50 25 l50 0
+0 -50 c0 -47 -2 -50 -25 -50 -20 0 -25 -5 -25 -25 0 -20 5 -25 25 -25 20 0 25
+-5 25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 5 -25 25 0 20 -5 25 -25 25 -20 0
+-25 -5 -25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -24 -2 -25 -75
+-25 -73 0 -75 1 -75 25 0 18 -5 25 -20 25 -15 0 -20 7 -20 25 0 18 5 25 20 25
+15 0 20 7 20 25 0 18 -5 25 -20 25 -15 0 -20 7 -20 25 0 20 -5 25 -25 25 -23
+0 -25 3 -25 50 l0 50 45 0 c41 0 45 -2 45 -25 0 -20 5 -25 25 -25 20 0 25 5
+25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 -5 25 -25z
+m-290 -100 c0 -20 -5 -25 -25 -25 -20 0 -25 5 -25 25 0 20 5 25 25 25 20 0 25
+-5 25 -25z"
+            />
+            <path
+              d="M670 1275 c0 -18 5 -25 20 -25 15 0 20 7 20 25 0 18 -5 25 -20 25
+-15 0 -20 -7 -20 -25z"
+            />
+            <path
+              d="M760 1275 c0 -20 5 -25 25 -25 20 0 25 -5 25 -25 0 -20 5 -25 25 -25
+20 0 25 -5 25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -20 5 -25 25
+-25 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20 0
+-25 5 -25 25 0 20 -5 25 -25 25 -20 0 -25 5 -25 25 0 20 -5 25 -25 25 -20 0
+-25 -5 -25 -25z"
+            />
+            <path
+              d="M710 1125 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25
+-20 0 -25 -5 -25 -25z"
+            />
+            <path
+              d="M1112 1278 l3 -173 170 0 170 0 3 173 2 172 -175 0 -175 0 2 -172z
+m298 -3 l0 -125 -125 0 -125 0 0 125 0 125 125 0 125 0 0 -125z"
+            />
+            <path
+              d="M1210 1275 l0 -75 75 0 75 0 0 75 0 75 -75 0 -75 0 0 -75z"
+            />
+            <path
+              d="M420 1150 c0 -47 2 -50 25 -50 23 0 25 3 25 50 0 47 -2 50 -25 50
+-23 0 -25 -3 -25 -50z"
+            />
+            <path
+              d="M20 1025 l0 -25 100 0 100 0 0 -50 0 -50 -50 0 c-47 0 -50 2 -50 25
+0 23 -3 25 -50 25 -47 0 -50 -2 -50 -25 0 -23 3 -25 50 -25 l50 0 0 -70 c0
+-68 -1 -70 -25 -70 -18 0 -25 5 -25 20 0 15 -7 20 -25 20 -18 0 -25 -5 -25
+-20 0 -15 7 -20 25 -20 20 0 25 -5 25 -25 0 -23 3 -25 50 -25 l50 0 0 45 c0
+41 2 45 25 45 23 0 25 -4 25 -45 0 -41 2 -45 25 -45 20 0 25 5 25 25 0 20 5
+25 25 25 20 0 25 -5 25 -25 0 -20 5 -25 25 -25 20 0 25 -5 25 -25 0 -20 -5
+-25 -25 -25 -20 0 -25 -5 -25 -25 0 -23 -3 -25 -50 -25 -47 0 -50 -2 -50 -25
+0 -20 -5 -25 -25 -25 -23 0 -25 3 -25 50 0 47 -2 50 -25 50 -20 0 -25 -5 -25
+-25 0 -20 -5 -25 -25 -25 -20 0 -25 5 -25 25 0 20 -5 25 -25 25 l-25 0 0 -125
+0 -125 25 0 c24 0 25 2 25 75 l0 75 50 0 c47 0 50 -2 50 -25 0 -20 5 -25 25
+-25 23 0 25 -3 25 -50 0 -47 2 -50 25 -50 23 0 25 3 25 50 0 47 -2 50 -25 50
+-20 0 -25 5 -25 25 0 23 3 25 50 25 47 0 50 -2 50 -25 0 -20 5 -25 25 -25 20
+0 25 -5 25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -20 5 -25 25 -25
+20 0 25 5 25 25 0 20 5 25 25 25 24 0 25 -2 25 -75 0 -73 1 -75 25 -75 20 0
+25 -5 25 -25 0 -20 -5 -25 -25 -25 l-25 0 0 -125 0 -125 25 0 c20 0 25 5 25
+25 0 23 3 25 50 25 47 0 50 -2 50 -25 0 -20 5 -25 25 -25 23 0 25 3 25 50 0
+47 2 50 25 50 20 0 25 5 25 25 l0 25 -100 0 -100 0 0 25 c0 20 5 25 25 25 20
+0 25 5 25 25 0 20 5 25 25 25 24 0 25 2 25 75 0 73 1 75 25 75 20 0 25 -5 25
+-25 0 -20 5 -25 25 -25 20 0 25 -5 25 -25 0 -20 -5 -25 -25 -25 -23 0 -25 -3
+-25 -50 0 -47 2 -50 25 -50 20 0 25 5 25 25 0 18 5 25 20 25 15 0 20 -7 20
+-25 l0 -25 100 0 100 0 0 25 c0 23 3 25 50 25 47 0 50 -2 50 -25 0 -20 -5 -25
+-25 -25 -23 0 -25 -3 -25 -50 0 -47 -2 -50 -25 -50 -20 0 -25 5 -25 25 0 24
+-2 25 -75 25 -73 0 -75 -1 -75 -25 0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25
+0 -20 5 -25 25 -25 20 0 25 -5 25 -25 0 -20 5 -25 25 -25 20 0 25 5 25 25 0
+20 5 25 25 25 20 0 25 -5 25 -25 0 -20 5 -25 25 -25 20 0 25 5 25 25 0 24 2
+25 75 25 73 0 75 1 75 25 0 24 2 25 75 25 l75 0 0 50 c0 47 2 50 25 50 23 0
+25 3 25 50 0 47 2 50 25 50 23 0 25 -3 25 -50 l0 -50 75 0 75 0 0 50 0 50 -50
+0 c-47 0 -50 2 -50 25 0 20 5 25 25 25 23 0 25 3 25 50 0 47 2 50 25 50 20 0
+25 5 25 25 0 23 -3 25 -50 25 -47 0 -50 2 -50 25 0 20 -5 25 -25 25 -20 0 -25
+5 -25 25 0 23 -3 25 -50 25 -47 0 -50 2 -50 25 0 20 5 25 25 25 20 0 25 5 25
+25 0 23 3 25 50 25 47 0 50 -2 50 -25 0 -23 3 -25 50 -25 l50 0 0 50 c0 47 -2
+50 -25 50 -18 0 -25 5 -25 20 0 15 -7 20 -25 20 -18 0 -25 -5 -25 -20 0 -15
+-7 -20 -25 -20 -18 0 -25 5 -25 20 0 17 -7 20 -50 20 -47 0 -50 2 -50 25 0 23
+3 25 50 25 47 0 50 2 50 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 5 25 25 25
+23 0 25 3 25 50 0 47 -2 50 -25 50 -23 0 -25 -3 -25 -50 0 -47 -2 -50 -25 -50
+-23 0 -25 3 -25 50 0 47 -2 50 -25 50 -20 0 -25 -5 -25 -25 0 -20 -5 -25 -25
+-25 -20 0 -25 5 -25 25 0 20 -5 25 -25 25 -20 0 -25 -5 -25 -25 0 -20 -5 -25
+-25 -25 -20 0 -25 5 -25 25 0 20 -5 25 -25 25 -20 0 -25 -5 -25 -25 0 -20 -5
+-25 -25 -25 -23 0 -25 -3 -25 -50 0 -47 -2 -50 -25 -50 -20 0 -25 -5 -25 -25
+0 -24 2 -25 75 -25 73 0 75 -1 75 -25 0 -23 -3 -25 -50 -25 l-50 0 0 -45 c0
+-41 -2 -45 -25 -45 -20 0 -25 -5 -25 -25 0 -20 5 -25 25 -25 23 0 25 -3 25
+-50 0 -47 2 -50 25 -50 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20
+5 25 25 25 24 0 25 -2 25 -75 l0 -75 -125 0 -125 0 0 25 c0 20 5 25 25 25 20
+0 25 5 25 25 0 20 -5 25 -25 25 -20 0 -25 -5 -25 -25 0 -23 -3 -25 -50 -25
+l-50 0 0 50 c0 47 2 50 25 50 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 5 25
+25 l0 25 -100 0 c-93 0 -100 1 -100 20 0 17 -7 20 -45 20 l-45 0 0 50 c0 47 2
+50 25 50 20 0 25 5 25 25 0 23 -3 25 -50 25 -47 0 -50 -2 -50 -25 0 -20 -5
+-25 -25 -25 -23 0 -25 3 -25 50 0 47 2 50 25 50 20 0 25 5 25 25 l0 25 -125 0
+-125 0 0 -25 c0 -20 -5 -25 -25 -25 -20 0 -25 5 -25 25 l0 25 -125 0 -125 0 0
+-25z m400 -75 c0 -47 -2 -50 -25 -50 -20 0 -25 -5 -25 -25 0 -20 -5 -25 -25
+-25 -20 0 -25 -5 -25 -25 0 -20 5 -25 25 -25 18 0 25 -5 25 -20 0 -15 7 -20
+25 -20 23 0 25 4 25 45 0 41 2 45 25 45 23 0 25 -4 25 -45 l0 -45 50 0 c43 0
+50 3 50 20 0 15 -7 20 -25 20 -20 0 -25 5 -25 25 0 20 5 25 25 25 20 0 25 -5
+25 -25 0 -20 5 -25 25 -25 18 0 25 -5 25 -20 0 -15 7 -20 25 -20 20 0 25 -5
+25 -25 0 -20 -5 -25 -25 -25 -23 0 -25 -3 -25 -50 0 -47 2 -50 25 -50 20 0 25
+5 25 25 0 18 5 25 20 25 15 0 20 7 20 25 0 23 3 25 50 25 47 0 50 -2 50 -25 0
+-23 -3 -25 -50 -25 -47 0 -50 -2 -50 -25 0 -20 5 -25 25 -25 23 0 25 -3 25
+-50 0 -47 2 -50 25 -50 20 0 25 -5 25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 -5
+-25 -25 0 -24 -2 -25 -70 -25 l-70 0 0 50 c0 47 2 50 25 50 20 0 25 5 25 25 0
+24 -2 25 -75 25 -73 0 -75 -1 -75 -25 0 -20 5 -25 25 -25 23 0 25 -3 25 -50 0
+-47 -2 -50 -25 -50 -20 0 -25 -5 -25 -25 0 -20 -5 -25 -25 -25 -23 0 -25 3
+-25 50 0 47 -2 50 -25 50 -23 0 -25 3 -25 50 l0 50 -50 0 c-47 0 -50 2 -50 25
+0 23 3 25 50 25 l50 0 0 50 c0 47 -2 50 -25 50 -20 0 -25 5 -25 25 0 20 -5 25
+-25 25 -18 0 -25 5 -25 20 0 15 -7 20 -25 20 -20 0 -25 5 -25 25 0 20 -5 25
+-25 25 -20 0 -25 5 -25 25 0 20 5 25 25 25 20 0 25 -5 25 -25 0 -20 5 -25 25
+-25 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20 0
+-25 5 -25 25 0 23 3 25 50 25 l50 0 0 -50z m690 25 c0 -20 5 -25 25 -25 20 0
+25 -5 25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 5 -25 25 0 20 -5 25 -25 25 -20
+0 -25 5 -25 25 0 20 5 25 25 25 20 0 25 -5 25 -25z m150 -50 c0 -20 -5 -25
+-25 -25 -20 0 -25 5 -25 25 0 20 5 25 25 25 20 0 25 -5 25 -25z m-100 -190 c0
+-23 -3 -25 -50 -25 -47 0 -50 2 -50 25 0 23 3 25 50 25 47 0 50 -2 50 -25z
+m100 0 c0 -20 -5 -25 -25 -25 -20 0 -25 5 -25 25 0 20 5 25 25 25 20 0 25 -5
+25 -25z m0 -200 c0 -23 3 -25 50 -25 47 0 50 -2 50 -25 0 -23 -3 -25 -50 -25
+-47 0 -50 2 -50 25 0 20 -5 25 -25 25 -20 0 -25 5 -25 25 0 20 5 25 25 25 20
+0 25 -5 25 -25z m-350 -100 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 5 25 25
+25 24 0 25 -2 25 -75 l0 -75 -50 0 c-47 0 -50 2 -50 25 0 20 -5 25 -25 25 -23
+0 -25 -3 -25 -50 l0 -50 -75 0 c-73 0 -75 1 -75 25 0 20 5 25 25 25 20 0 25 5
+25 25 0 23 3 25 50 25 l50 0 0 50 c0 47 2 50 25 50 20 0 25 -5 25 -25z m300
+-100 l0 -75 -75 0 -75 0 0 75 0 75 75 0 75 0 0 -75z m150 50 c0 -23 -3 -25
+-50 -25 -47 0 -50 2 -50 25 0 23 3 25 50 25 47 0 50 -2 50 -25z m-250 -200 c0
+-20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -20 -5 -25 -25 -25 -20 0 -25 5
+-25 25 0 20 5 25 25 25 20 0 25 5 25 25 0 20 5 25 25 25 20 0 25 -5 25 -25z
+m-300 -100 c0 -20 -5 -25 -25 -25 -20 0 -25 5 -25 25 0 20 5 25 25 25 20 0 25
+-5 25 -25z"
+            />
+            <path
+              d="M520 660 c0 -47 2 -50 25 -50 23 0 25 3 25 50 0 47 -2 50 -25 50 -23
+0 -25 -3 -25 -50z"
+            />
+            <path
+              d="M420 585 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20
+0 -25 -5 -25 -25z"
+            />
+            <path
+              d="M710 485 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20
+0 -25 -5 -25 -25z"
+            />
+            <path
+              d="M1110 335 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25
+-20 0 -25 -5 -25 -25z"
+            />
+            <path
+              d="M1410 875 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25
+-20 0 -25 -5 -25 -25z"
+            />
+            <path
+              d="M120 435 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20
+0 -25 -5 -25 -25z"
+            />
+            <path
+              d="M20 185 l0 -175 173 2 172 3 0 170 0 170 -172 3 -173 2 0 -175z m300
+0 l0 -125 -125 0 -125 0 0 125 0 125 125 0 125 0 0 -125z"
+            />
+            <path d="M120 185 l0 -75 75 0 75 0 0 75 0 75 -75 0 -75 0 0 -75z" />
+            <path
+              d="M1310 135 c0 -20 -5 -25 -25 -25 -20 0 -25 -5 -25 -25 0 -20 -5 -25
+-25 -25 -20 0 -25 -5 -25 -25 0 -24 2 -25 75 -25 l75 0 0 50 c0 47 2 50 25 50
+20 0 25 -5 25 -25 0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20
+0 -25 5 -25 25 0 23 -3 25 -50 25 -47 0 -50 -2 -50 -25z"
+            />
+            <path
+              d="M1110 35 c0 -20 5 -25 25 -25 20 0 25 5 25 25 0 20 -5 25 -25 25 -20
+0 -25 -5 -25 -25z"
+            />
+          </g>
+        </svg>
+      </div>
+    </footer>
+  </body>
+</html>
